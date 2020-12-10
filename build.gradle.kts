@@ -15,17 +15,16 @@ java.sourceCompatibility = JavaVersion.VERSION_11
 repositories {
     mavenCentral()
     jcenter()
-    maven { url = uri("https://oss.jfrog.org/oss-snapshot-local") }
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
-    implementation("io.vlingo:vlingo-actors:1.3.0")
-    implementation("io.vlingo:vlingo-lattice:1.3.0")
-    implementation("io.vlingo:vlingo-symbio:1.3.0")
-    implementation("io.vlingo:vlingo-symbio-jdbc:1.3.0")
-    implementation("io.vlingo:vlingo-http:1.3.0")
+    implementation("io.vlingo:vlingo-actors:1.4.0")
+    implementation("io.vlingo:vlingo-lattice:1.4.0")
+    implementation("io.vlingo:vlingo-symbio:1.4.0")
+    implementation("io.vlingo:vlingo-symbio-jdbc:1.4.0")
+    implementation("io.vlingo:vlingo-http:1.4.0")
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
     testImplementation("io.rest-assured:rest-assured:4.3.2")
     testImplementation("io.rest-assured:kotlin-extensions:4.3.2")
@@ -35,7 +34,7 @@ dependencies {
 }
 
 application {
-    mainClassName = "pl.zalas.mastermind.infrastructure.http.Application"
+    mainClass.set("pl.zalas.mastermind.infrastructure.http.Application")
 }
 
 tasks {

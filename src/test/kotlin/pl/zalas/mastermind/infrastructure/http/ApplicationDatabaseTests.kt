@@ -52,7 +52,9 @@ class ApplicationDatabaseTests {
 
     @AfterEach
     fun stopApplication() {
-        app.stop()
+        app?.run {
+            stop()
+        }
     }
 
     @Test
